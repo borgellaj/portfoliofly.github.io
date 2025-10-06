@@ -1,123 +1,55 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Fly Labs | Golden 20 Invitation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg,#0d1117,#161b22);
+      color:#f0f6fc; margin:0; padding:0;
+      display:flex; flex-direction:column; align-items:center;
+      min-height:100vh; text-align:center;
+    }
+    header {margin-top:8vh;}
+    h1 {font-size:2.2rem; margin-bottom:.25rem;}
+    h2 {font-weight:400; color:#8b949e; margin-top:0;}
+    p {max-width:640px; line-height:1.6; color:#c9d1d9;}
+    a.button {
+      background:#238636; color:white; padding:0.8em 1.6em;
+      border-radius:8px; text-decoration:none; font-weight:600;
+      margin-top:2rem; display:inline-block;
+      transition:background .2s ease;
+    }
+    a.button:hover {background:#2ea043;}
+    footer {margin-top:auto; padding:2rem; font-size:.85rem; color:#8b949e;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portfolio Fly Labs</h1>
+    <h2>Golden 20 Invitation</h2>
+  </header>
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+  <main>
+    <p>
+      We are assembling a founding cohort of twenty partners who will help launch
+      <strong>Portfolio Fly Labs</strong> — a firm built to change how modern traders reach
+      consistent profitability through structured automation and disciplined execution.
+    </p>
+    <p>
+      This is a private, invite-only discussion outlining the model, early-partner structure,
+      and our roadmap to transform the trading landscape.  
+      If you received this link, you’re one of the twenty we’d like to speak with first.
+    </p>
 
-[Link to another page](another-page).
+    <a class="button" href="https://calendly.com/borgella-portfoliofly" target="_blank">
+      Schedule Your 15-Minute Call
+    </a>
+  </main>
 
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# [](#header-1)Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## [](#header-2)Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### [](#header-3)Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### [](#header-4)Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### [](#header-5)Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### [](#header-6)Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+  <footer>© 2025 Portfolio Fly Labs · All Rights Reserved</footer>
+</body>
+</html>
