@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Fly Labs | Golden 20 Invitation</title>
+  <title>Portfolio Fly Labs | Founding Cohort Invitation</title>
 
   <!-- Meta / Preview -->
-  <meta name="description" content="Portfolio Fly Labs — private invitation to the Golden 20 cohort: partners helping build the future of disciplined, automated trading." />
-  <meta property="og:title" content="Portfolio Fly Labs | Golden 20 Invitation" />
-  <meta property="og:description" content="Private invitation to partner with Portfolio Fly Labs and shape the AFZ Black Box roadmap." />
+  <meta name="description" content="Portfolio Fly Labs — private invitation to the founding cohort creating automated family offices for individual traders." />
+  <meta property="og:title" content="Portfolio Fly Labs | Founding Cohort Invitation" />
+  <meta property="og:description" content="Private invitation to help shape algorithmic trading systems that operate like institutional family offices." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://borgellaj.github.io/portfoliofly.github.io/" />
+  <meta property="og:url" content="https://portfoliofly.com/" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Font & Style -->
@@ -43,22 +43,24 @@
 <body>
   <header>
     <h1>Portfolio Fly Labs</h1>
-    <h2>Golden 20 Invitation</h2>
+    <h2>Founding Cohort Invitation</h2>
     <div class="dash"></div>
   </header>
 
   <main>
     <p>
-      We’re forming a private founding cohort — the <strong>Golden 20</strong> — to partner with
-      <strong>Portfolio Fly Labs</strong> as we scale a disciplined, automated
-      <em>NQ 20-minute engine</em> that passes Apex evaluations in ≤8 trading days and manages
-      PAs with strict risk controls.
+      We are building <strong>Portfolio Fly Labs</strong> — a next-generation algorithmic trading platform
+      designed to turn ordinary brokerage accounts into <strong>automated family offices</strong> that operate
+      with the precision, structure, and capital discipline of the 1%.
     </p>
     <p>
-      On this call, you’ll hear our pass protocol, risk guardrails, how tranches
-      (20 clients per FTE) scale, and the roadmap toward the multi-asset AFZ Black Box.
-      If you’ve received this invitation, you’re among the first we’d like to join
-      in shaping a company built to redefine algorithmic trading.
+      This private 15-minute conversation is for our <strong>founding cohort</strong> — a select group invited
+      to preview our architecture, early-partner model, and long-term vision before public launch.
+      The discussion is confidential and focused on collaboration, design, and impact.
+    </p>
+    <p>
+      If you’ve received this link, you’re among the first invited to help shape a company
+      that will redefine how traders build generational wealth through automation.
     </p>
 
     <!-- Calendly Inline Embed -->
@@ -70,7 +72,7 @@
     <!-- Fallback button -->
     <p style="margin-top:10px">
       <a class="button" href="https://calendly.com/borgella-portfoliofly" target="_blank" rel="noopener">
-        Schedule Your 15-Minute Call
+        Schedule Your Private 15-Minute Call
       </a>
     </p>
   </main>
