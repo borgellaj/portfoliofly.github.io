@@ -1,0 +1,11 @@
+[build]
+  command = ""            # No build command (we're serving static files directly)
+  publish = "/"           # Root directory of your repo
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
