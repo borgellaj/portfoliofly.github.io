@@ -25,12 +25,50 @@
       align-items:center;
       min-height:100vh;
       text-align:center;
+      overflow-x:hidden;
+      animation: fadeInBody 1.2s ease-in-out;
     }
-    header { margin-top:8vh; }
-    h1 { font-size:2.3rem; margin-bottom:.25rem; }
-    h2 { font-weight:400; color:#8b949e; margin-top:0; }
-    p { max-width:640px; line-height:1.6; color:#c9d1d9; }
-    .dash { width:64px;height:2px;background:#2ea043;margin:18px auto 8px;border-radius:2px; }
+
+    header {
+      margin-top:8vh;
+      opacity:0;
+      animation: fadeInHeader 1.2s ease forwards;
+      animation-delay:0.3s;
+    }
+
+    h1 {
+      font-size:2.3rem;
+      margin-bottom:.25rem;
+      letter-spacing:0.5px;
+    }
+
+    h2 {
+      font-weight:400;
+      color:#8b949e;
+      margin-top:0;
+    }
+
+    p {
+      max-width:640px;
+      line-height:1.6;
+      color:#c9d1d9;
+      margin: 0 auto;
+      opacity:0;
+      animation: fadeInContent 1.3s ease forwards;
+      animation-delay:0.6s;
+    }
+
+    .dash {
+      width:64px;
+      height:2px;
+      background:#2ea043;
+      margin:18px auto 8px;
+      border-radius:2px;
+      opacity:0;
+      animation: fadeInLine 1.2s ease forwards;
+      animation-delay:0.5s;
+    }
+
     a.button {
       background:#238636;
       color:white;
@@ -40,14 +78,58 @@
       font-weight:600;
       margin-top:2rem;
       display:inline-block;
-      transition:background .2s ease;
+      transition:background .2s ease, transform .2s ease;
+      opacity:0;
+      animation: fadeInButton 1.5s ease forwards;
+      animation-delay:1.2s;
     }
-    a.button:hover { background:#2ea043; }
-    footer { margin-top:auto; padding:2rem; font-size:.85rem; color:#8b949e; }
+
+    a.button:hover {
+      background:#2ea043;
+      transform:translateY(-2px);
+    }
+
+    footer {
+      margin-top:auto;
+      padding:2rem;
+      font-size:.85rem;
+      color:#8b949e;
+      opacity:0;
+      animation: fadeInFooter 1.6s ease forwards;
+      animation-delay:1.8s;
+    }
+
     main { padding:0 16px; }
+
     @media (min-width:768px) {
       h1 { font-size:2.6rem; }
       p { font-size:1.05rem; }
+    }
+
+    /* === Animations === */
+    @keyframes fadeInBody {
+      from { opacity:0; }
+      to { opacity:1; }
+    }
+    @keyframes fadeInHeader {
+      from { opacity:0; transform:translateY(-20px); }
+      to { opacity:1; transform:translateY(0); }
+    }
+    @keyframes fadeInLine {
+      from { opacity:0; width:0; }
+      to { opacity:1; width:64px; }
+    }
+    @keyframes fadeInContent {
+      from { opacity:0; transform:translateY(15px); }
+      to { opacity:1; transform:translateY(0); }
+    }
+    @keyframes fadeInButton {
+      from { opacity:0; transform:translateY(10px); }
+      to { opacity:1; transform:translateY(0); }
+    }
+    @keyframes fadeInFooter {
+      from { opacity:0; }
+      to { opacity:1; }
     }
   </style>
 </head>
