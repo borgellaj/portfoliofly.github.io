@@ -28,36 +28,31 @@
       overflow-x:hidden;
       animation: fadeInBody 1.2s ease-in-out;
     }
-
     header {
       margin-top:8vh;
       opacity:0;
       animation: fadeInHeader 1.2s ease forwards;
       animation-delay:0.3s;
     }
-
     h1 {
       font-size:2.3rem;
       margin-bottom:.25rem;
       letter-spacing:0.5px;
     }
-
     h2 {
       font-weight:400;
       color:#8b949e;
       margin-top:0;
     }
-
     p {
-      max-width:640px;
+      max-width:720px;
       line-height:1.6;
       color:#c9d1d9;
-      margin: 0 auto;
+      margin:0 auto 1.4rem;
       opacity:0;
       animation: fadeInContent 1.3s ease forwards;
       animation-delay:0.6s;
     }
-
     .dash {
       width:64px;
       height:2px;
@@ -68,7 +63,6 @@
       animation: fadeInLine 1.2s ease forwards;
       animation-delay:0.5s;
     }
-
     a.button {
       background:#238636;
       color:white;
@@ -83,12 +77,31 @@
       animation: fadeInButton 1.5s ease forwards;
       animation-delay:1.2s;
     }
-
     a.button:hover {
       background:#2ea043;
       transform:translateY(-2px);
     }
-
+    section {
+      padding:3rem 1rem;
+      opacity:0;
+      animation: fadeInContent 1.3s ease forwards;
+      animation-delay:0.7s;
+    }
+    section h3 {
+      color:#58a6ff;
+      font-size:1.4rem;
+      margin-bottom:0.75rem;
+    }
+    ul {
+      list-style:none;
+      padding:0;
+      margin:0 auto;
+      max-width:640px;
+    }
+    li {
+      margin-bottom:.5rem;
+      color:#c9d1d9;
+    }
     footer {
       margin-top:auto;
       padding:2rem;
@@ -98,39 +111,18 @@
       animation: fadeInFooter 1.6s ease forwards;
       animation-delay:1.8s;
     }
-
     main { padding:0 16px; }
-
     @media (min-width:768px) {
       h1 { font-size:2.6rem; }
       p { font-size:1.05rem; }
     }
-
     /* === Animations === */
-    @keyframes fadeInBody {
-      from { opacity:0; }
-      to { opacity:1; }
-    }
-    @keyframes fadeInHeader {
-      from { opacity:0; transform:translateY(-20px); }
-      to { opacity:1; transform:translateY(0); }
-    }
-    @keyframes fadeInLine {
-      from { opacity:0; width:0; }
-      to { opacity:1; width:64px; }
-    }
-    @keyframes fadeInContent {
-      from { opacity:0; transform:translateY(15px); }
-      to { opacity:1; transform:translateY(0); }
-    }
-    @keyframes fadeInButton {
-      from { opacity:0; transform:translateY(10px); }
-      to { opacity:1; transform:translateY(0); }
-    }
-    @keyframes fadeInFooter {
-      from { opacity:0; }
-      to { opacity:1; }
-    }
+    @keyframes fadeInBody { from { opacity:0; } to { opacity:1; } }
+    @keyframes fadeInHeader { from { opacity:0; transform:translateY(-20px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeInLine { from { opacity:0; width:0; } to { opacity:1; width:64px; } }
+    @keyframes fadeInContent { from { opacity:0; transform:translateY(15px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeInButton { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeInFooter { from { opacity:0; } to { opacity:1; } }
   </style>
 </head>
 
@@ -143,8 +135,32 @@
 
   <main>
     {{ content }}
+
+    <!-- === ABOUT SECTION === -->
+    <section id="about">
+      <h3>About Portfolio Fly Labs</h3>
+      <p><strong>Portfolio Fly Labs (PFL)</strong> is a Brooklyn-based MWBE fintech company building secure, auditable systems that empower individual traders and small institutions to manage markets with institutional precision. Our architecture fuses AI-driven analytics, market simulations, and compliance frameworks to create next-generation financial intelligence tools.</p>
+
+      <p>We focus on developing transparent, cloud-native infrastructure that allows clients to retain full control of their accounts while benefiting from automated insights and signal orchestration. The platform is designed to scale globally and align with future regulatory standards for algorithmic trading transparency.</p>
+    </section>
+
+    <!-- === CAREERS SECTION === -->
+    <section id="careers">
+      <h3>Careers & Collaboration</h3>
+      <p>Portfolio Fly Labs is growing a distributed team of engineers, analysts, and researchers passionate about financial innovation, data ethics, and scalable automation. We believe the next wave of trading infrastructure will be built collaboratively, combining technology, transparency, and trust.</p>
+
+      <ul>
+        <li>🌐 Cloud / AI Infrastructure Engineers</li>
+        <li>📊 Quantitative & Data Analysts</li>
+        <li>🧠 Machine Learning Researchers</li>
+        <li>💡 Front-End Developers (React / Tailwind)</li>
+      </ul>
+
+      <p>To express interest in joining our early engineering or research team, contact us at <a href="mailto:borgella@portfoliofly.com">borgella@portfoliofly.com</a>.</p>
+    </section>
+
   </main>
 
-  <footer>© 2025 Portfolio Fly Labs · All Rights Reserved</footer>
+  <footer>© 2025 Portfolio Fly Labs · Brooklyn, NY · All Rights Reserved</footer>
 </body>
 </html>
