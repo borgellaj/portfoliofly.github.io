@@ -65,15 +65,52 @@
       <p>Interested? Email <a href="mailto:borgella@portfoliofly.com">borgella@portfoliofly.com</a>.</p>
     </section>
 
-    <!-- GOLDEN 20 INVITE (Calendly) -->
-    <section id="golden20">
-      <h3 style="color:#2ea043;">Schedule Your Golden 20 Cohort Chat</h3>
-      <p>The Golden 20 Cohort is an invitation-only founding group helping shape the Portfolio Fly Labs trading ecosystem. Book a short discovery session to discuss your participation and onboarding.</p>
-      <div class="calendly-inline-widget" data-url="https://calendly.com/borgella-portfoliofly/15min"
-           style="min-width:320px;height:700px;margin-top:1rem;"></div>
-      <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    </section>
-  </main>
+    <!-- === GOLDEN 20 INVITE (Responsive + Dark Integration) === -->
+<section id="golden20">
+  <h3 style="color:#2ea043;">Schedule Your Golden 20 Cohort Chat</h3>
+  <p>
+    The Golden 20 Cohort is an invitation-only founding group helping shape the
+    Portfolio Fly Labs trading ecosystem. Book a short discovery session to discuss
+    your participation and onboarding.
+  </p>
+
+  <div class="calendly-wrapper">
+    <div class="calendly-inline-widget"
+         data-url="https://calendly.com/borgella-portfoliofly/15min"
+         style="min-width:320px; height:700px;"></div>
+  </div>
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</section>
+
+<style>
+  /* responsive wrapper */
+  .calendly-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #0d1117;
+    box-shadow: 0 0 12px rgba(0,0,0,.35);
+  }
+
+  /* mobile height adjust */
+  @media (max-width: 768px) {
+    .calendly-wrapper .calendly-inline-widget {
+      height: 1000px !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .calendly-wrapper .calendly-inline-widget {
+      height: 1100px !important;
+    }
+  }
+</style>
+
 
   <footer>© <span id="year"></span> Portfolio Fly Labs · Brooklyn, NY · All Rights Reserved</footer>
   <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
