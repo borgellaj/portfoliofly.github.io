@@ -183,6 +183,45 @@
         <div style="background:#111;padding:20px;border-radius:12px;margin-bottom:20px">
           <h3 style="margin-top:0">Step 1 — Member Intake (Required)</h3>
           <p class="small" style="margin-top:6px;color:#cfcfcf">This ties the Golden 20 <em>seat</em> to the correct person even if a spouse or business pays. The name here will appear on your NDA and Slack invite.</p>
+<script>
+(function () {
+  const form = document.getElementById("golden20-intake");
+  const webhook = "https://hooks.airtable.com/workflows/v1/genericWebhook/appnU2uh2AEYbY3eb/wflxXasE8gmILqKwO/wtr8QlqsGmwFAuxb0"; // exact URL from the trigger
+
+  const intakeMsg = document.getElementById("intake_msg");
+  const paywall   = document.getElementById("paywall");
+  const consent   = document.getElementById("consent_checkbox");
+  const eidInput  = document.getElementById("enrollment_id");
+  const eidView   = document.getElementById("eid_view");
+
+  const eid = (eidInput?.value) || ('G20-' + Math.random().toString(36).slice(2,8).toUpperCase() + '-' + Date.now());
+  if (eidInput) eidInput.value = eid;
+  try { localStorage.setItem('g20_eid', eid); } catch(_) {}
+  if (eidView) eidView.textContent = eid;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const fd = new FormData(form);
+    fd.set("enrollment_id", eid);
+
+    try {
+      const resp = await fetch(webhook, { method: "POST", body: fd });
+      if (!resp.ok) throw new Error();
+
+      localStorage.setItem("g20_intake_ok","1");
+      if (intakeMsg) intakeMsg.style.display = "block";
+      if (consent?.checked && paywall) paywall.style.display = "none";
+
+      document.getElementById("paypal-container-M8EDTMFED77YG")
+        ?.scrollIntoView({behavior:"smooth", block:"start"});
+
+      alert("✅ Intake recorded successfully. Review consent and proceed to payment.");
+    } catch {
+      alert("We could not record your intake. Please try again or contact support.");
+    }
+  });
+})();
+</script>
 
           <form id="golden20-intake" class="form" method="post" action="https://hooks.airtable.com/workflows/v1/genericWebhook/appnU2uh2AEYbY3eb/wflxXasE8gmILqKwO/wtr8QlqsGmwFAuxb0" novalidate>
             <input type="hidden" name="enrollment_id" id="enrollment_id">
