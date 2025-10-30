@@ -6,6 +6,30 @@
   <title>Portfolio Fly Labs • Golden 20 Discovery Cohort</title>
   <meta name="description" content="Portfolio Fly Labs Golden 20 — non-custodial educational discovery cohort." />
   <style>
+    /* --- Overview Pack helpers --- */
+.badge{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .65rem;border:1px solid var(--border);border-radius:999px;color:var(--gold);font-size:.85rem}
+.kicker{letter-spacing:.12em;text-transform:uppercase;color:#bfbfbf;font-size:.8rem}
+.grid{display:grid;gap:14px}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}
+.tile{background:#121214;border:1px solid var(--border);border-radius:14px;padding:16px}
+.tile h4{margin:.1rem 0 .35rem;font-size:1.05rem}
+.dim{color:#c9c9c9}
+.hr{height:1px;background:var(--border);margin:16px 0}
+.stat{display:flex;align-items:baseline;gap:8px}
+.stat .n{font-size:1.6rem;font-weight:800;color:var(--gold)}
+.note-ok{color:#9ee89e}
+.note-warn{color:#ffd140}
+.check{display:flex;gap:10px;align-items:flex-start}
+.check i{margin-top:3px}
+.accordion{border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.acc-item+ .acc-item{border-top:1px solid var(--border)}
+.acc-head{display:flex;justify-content:space-between;gap:12px;cursor:pointer;padding:14px 16px;background:#101013}
+.acc-body{padding:0 16px 14px 16px;display:none;color:#d8d8d8;background:#0e0f12}
+.acc-item.open .acc-body{display:block}
+.badge-inline{display:inline-flex;gap:6px;align-items:center;padding:.25rem .55rem;border:1px solid var(--border);border-radius:999px;color:#ddd;font-size:.78rem}
+
     :root{--black:#0b0b0c;--white:#ffffff;--orange:#ff7a18;--gold:#ffd140;--border:#1f2937;--muted:#9ca3af}
     html,body{margin:0;background:var(--black);color:var(--white);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
     a{color:var(--gold);text-decoration:none} a:hover{text-decoration:underline}
@@ -45,6 +69,153 @@
       <h1>Golden 20 Discovery Cohort</h1>
       <p class="small">Non-custodial • Regulator-ready • Educational discovery. Keep full custody; we provide structure, transparency, and discipline.</p>
     </section>
+<!-- ===================== OVERVIEW / POP ===================== -->
+<section class="section">
+  <span class="kicker">Customer discovery • Non-custodial • Educational</span>
+  <h1 style="margin:.3rem 0 1rem">Where structure meets freedom</h1>
+  <p class="dim" style="max-width:72ch">
+    Golden 20 is a short discovery sprint. You keep custody at your own broker; we
+    provide a clear structure for observing markets, documenting behavior, and learning a
+    repeatable discipline. We do <em>proof of behavior</em>—not exposure of source.
+  </p>
+
+  <div class="grid grid-3" style="margin-top:14px">
+    <div class="tile">
+      <h4>Non-custodial by design</h4>
+      <p class="dim">Funds remain in your own brokerage account. Our interface is observation and education with sealed-logic outputs.</p>
+    </div>
+    <div class="tile">
+      <h4>Transparent artifacts</h4>
+      <p class="dim">Every action in the sprint is logged and time-stamped. We keep an immutable trail to support later audits or reviews.</p>
+    </div>
+    <div class="tile">
+      <h4>Regulator-ready stance</h4>
+      <p class="dim">This cohort operates as customer discovery & education while we continue our compliance track. Clean separation of concerns.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section card">
+  <div class="grid grid-3">
+    <div class="stat tile">
+      <span class="n">2</span><span class="dim">steps: intake ➜ consent + $400</span>
+    </div>
+    <div class="stat tile">
+      <span class="n">5–10%</span><span class="dim">risk cap per plan while observing</span>
+    </div>
+    <div class="stat tile">
+      <span class="n">14 days</span><span class="dim">typical discovery window</span>
+    </div>
+  </div>
+
+  <div class="hr"></div>
+
+  <div class="grid grid-2">
+    <div class="tile">
+      <h4>What you’ll actually do</h4>
+      <div class="check"><i>🟧</i><p class="dim">Join Slack for cohort updates, debriefs, and office hours.</p></div>
+      <div class="check"><i>🟧</i><p class="dim">Observe structure outputs (“Structure Engine”) in sim first; learn validation rules without touching source.</p></div>
+      <div class="check"><i>🟧</i><p class="dim">Document observations: confirmations, failures, retests, and when to stand down.</p></div>
+      <div class="check"><i>🟧</i><p class="dim">Complete a short retro: what the market showed vs. what you expected.</p></div>
+    </div>
+
+    <div class="tile">
+      <h4>What you’ll receive</h4>
+      <div class="check"><i>✅</i><p class="dim">Sealed-logic outputs, replay snippets, and cohort notes.</p></div>
+      <div class="check"><i>✅</i><p class="dim">NDA + governance overview and a clear operating handbook.</p></div>
+      <div class="check"><i>✅</i><p class="dim">Audit-ready activity log for your records.</p></div>
+      <div class="check"><i>✅</i><p class="dim">Onboarding call + Slack channel access.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section card">
+  <h2 style="margin-top:0">How the “Sleeve” idea works</h2>
+  <p class="dim">A <strong>sleeve</strong> is simply a segmented plan inside your own account (e.g., IBKR). Each sleeve has its own risk cap, rules, and audit trail. The Structure Engine provides <em>signals of interest</em>; you observe how they behave around validation zones.</p>
+  <div class="grid grid-3" style="margin-top:12px">
+    <div class="tile">
+      <h4>Core Futures (Observation)</h4>
+      <p class="dim">Micro index futures, structure-driven zones, documented entries/exits in sim first.</p>
+      <span class="badge-inline">risk capped</span>
+      <span class="badge-inline">time-stamped</span>
+    </div>
+    <div class="tile">
+      <h4>Options Structure (Discovery)</h4>
+      <p class="dim">Directional/defined-risk patterns mirroring structure bias; weekly cadence.</p>
+      <span class="badge-inline">defined-risk</span>
+      <span class="badge-inline">weekly</span>
+    </div>
+    <div class="tile">
+      <h4>Hedge/Balance (Context)</h4>
+      <p class="dim">Compression & rates context; when to reduce activity or stand aside.</p>
+      <span class="badge-inline">context first</span>
+      <span class="badge-inline">stand-down rules</span>
+    </div>
+  </div>
+</section>
+
+<section class="section card">
+  <h2 style="margin-top:0">Why this is safe to try (and useful to learn)</h2>
+  <div class="grid grid-2">
+    <div class="tile">
+      <div class="check"><i>🔒</i><p class="dim"><b>Non-custodial:</b> you never transfer funds to us. You keep control at your own broker.</p></div>
+      <div class="check"><i>🧩</i><p class="dim"><b>Sealed logic:</b> we verify behavior without exposing source. Outputs, not internals.</p></div>
+      <div class="check"><i>📑</i><p class="dim"><b>Artifacts:</b> immutable, time-stamped logs—ready for later compliance needs.</p></div>
+    </div>
+    <div class="tile">
+      <div class="check"><i>🧭</i><p class="dim"><b>Rules first:</b> risk caps, stand-down conditions, and a bias-then-validate approach.</p></div>
+      <div class="check"><i>👁️</i><p class="dim"><b>Observation > prediction:</b> we wait for structure to present itself and then measure.</p></div>
+      <div class="check"><i>🧾</i><p class="dim"><b>Transparent scope:</b> this is educational customer discovery—not an advisory product.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section card">
+  <h2 style="margin-top:0">Two-week discovery at a glance</h2>
+  <div class="grid grid-3">
+    <div class="tile">
+      <h4>Days 1–3</h4>
+      <p class="dim">Orientation, Slack access, NDA & governance, sim walk-throughs, first structure notes.</p>
+    </div>
+    <div class="tile">
+      <h4>Days 4–9</h4>
+      <p class="dim">Daily observation blocks; validate vs. invalidate behavior, log confirmations/failures.</p>
+    </div>
+    <div class="tile">
+      <h4>Days 10–14</h4>
+      <p class="dim">Replay & retro, “what surprised you,” handover of artifacts, next-steps eligibility.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section card">
+  <h2 style="margin-top:0">FAQ</h2>
+  <div class="accordion" id="faq">
+    <div class="acc-item">
+      <div class="acc-head"><strong>Is this an investment program?</strong><span>+</span></div>
+      <div class="acc-body">No. This is a customer-discovery and educational sprint. No equity or advisory product is being offered.</div>
+    </div>
+    <div class="acc-item">
+      <div class="acc-head"><strong>Who holds the money?</strong><span>+</span></div>
+      <div class="acc-body">You do. All funds remain at your own brokerage (e.g., IBKR). We remain non-custodial.</div>
+    </div>
+    <div class="acc-item">
+      <div class="acc-head"><strong>What’s the deliverable?</strong><span>+</span></div>
+      <div class="acc-body">Artifacts: logs, validation notes, cohort replays, and a simple operating handbook to keep.</div>
+    </div>
+    <div class="acc-item">
+      <div class="acc-head"><strong>What happens after the sprint?</strong><span>+</span></div>
+      <div class="acc-body">You’ll receive next-steps eligibility details (post-licensure paths), and can remain in the alumni Slack channel.</div>
+    </div>
+  </div>
+  <script>
+    // minimal accordion
+    document.querySelectorAll('#faq .acc-head').forEach(h=>{
+      h.addEventListener('click',()=>h.parentElement.classList.toggle('open'));
+    });
+  </script>
+</section>
+<!-- =================== /OVERVIEW =================== -->
 
     <!-- ===================== STEP 1: INTAKE ===================== -->
     <section class="section card" id="intake-card">
