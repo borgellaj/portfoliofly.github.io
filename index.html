@@ -4,249 +4,212 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio Fly Labs • Golden 20 Discovery Cohort</title>
-  <meta name="description" content="Portfolio Fly Labs Golden 20 — a customer-discovery and educational sprint. Non-custodial, regulator-ready, truth-based structure. Join the cohort."/>
+  <meta name="description" content="Portfolio Fly Labs Golden 20 — non-custodial educational discovery cohort." />
   <style>
-    :root{--pfl-black:#0b0b0c;--pfl-white:#ffffff;--pfl-orange:#ff7a18;--pfl-gold:#ffd140;--pfl-border:#1f2937;--pfl-muted:#9ca3af}
-    html,body{margin:0;padding:0;background:var(--pfl-black);color:var(--pfl-white);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
-    a{color:var(--pfl-gold);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .pfl-header{width:100%;background:#0b0b0c;border-bottom:1px solid var(--pfl-border);padding:clamp(14px,2vw,24px) 28px;display:flex;justify-content:center;align-items:center;position:sticky;top:0;z-index:50}
-    .pfl-brand{display:flex;align-items:center;gap:12px}
-    .pfl-logo{height:36px;width:auto;filter:drop-shadow(0 0 4px rgba(255,122,24,.35));transition:transform .3s ease, filter .3s ease}
-    .pfl-name{font-size:1.3rem;font-weight:700;letter-spacing:.02em;color:var(--pfl-orange);text-transform:uppercase;transition:opacity .3s ease}
-    .pfl-brand:hover .pfl-logo{transform:translateY(-1px) scale(1.02);filter:drop-shadow(0 0 8px rgba(255,122,24,.5))}
-    .pfl-header.scrolled .pfl-logo{filter:drop-shadow(0 0 10px rgba(255,122,24,.55))}
-    .pfl-header.scrolled .pfl-name{opacity:.92}
-    @media(max-width:600px){.pfl-name{font-size:1.1rem}.pfl-logo{height:30px}}
-    .container{max-width:1000px;margin:0 auto;padding:20px 24px}
-    .hero{padding:clamp(60px,10vw,100px) 0;background:radial-gradient(800px 400px at 70% -10%,rgba(255,122,24,.25),transparent 70%),linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0))}
-    .badge{display:inline-block;padding:.4rem .8rem;border:1px solid var(--pfl-border);border-radius:999px;color:var(--pfl-gold);font-size:.9rem;letter-spacing:.02em}
-    h1{font-size:clamp(2rem,4vw,3.2rem);margin:.5rem 0 1.2rem}
-    h2{font-size:clamp(1.4rem,2.4vw,2rem);margin:2.5rem 0 1rem}
-    p.lead{max-width:70ch;color:#eaeaea;font-size:1.2rem;line-height:1.6;margin-bottom:1.4em}
-    .grid{display:grid;gap:clamp(12px,2vw,20px)}
-    .card{background:linear-gradient(180deg,#121212,#0d0d0d);border:1px solid var(--pfl-border);border-radius:18px;padding:20px}
-    .section{padding:clamp(40px,6vw,64px) 0}
-    .chip{display:inline-flex;align-items:center;gap:.5rem;background:#161616;border:1px solid #222;border-radius:999px;padding:.4rem .7rem;color:#d1d5db;font-size:.85rem}
-    .button-primary{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--pfl-orange),#d34f00);border:none;border-radius:12px;color:#111;padding:.9rem 1.3rem;font-weight:700;cursor:pointer}
-    .small{font-size:.9rem;color:var(--pfl-muted)}
-    /* Form */
-    .form{display:grid;gap:16px}
-    .form .row{display:grid;gap:14px}
-    .form .row.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    @media(max-width:720px){.form .row.cols-2{grid-template-columns:1fr}}
-    .field{position:relative;background:#0e0f12;border:1px solid var(--pfl-border);border-radius:12px;padding:14px 14px 12px;transition:border-color .2s, box-shadow .2s}
-    .field:focus-within{border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.25)}
-    .field input,.field select{width:100%;background:transparent;border:none;outline:none;color:#e5e7eb;font-size:15px;line-height:1.4;padding-top:8px}
-    .label{position:absolute;left:12px;top:12px;color:#a3a3a3;font-size:13px;letter-spacing:.02em;pointer-events:none;transition:all .15s ease}
-    .field.filled .label,.field:focus-within .label{top:6px;font-size:11px;color:#d1d5db}
-    .checkbox{display:flex;align-items:flex-start;gap:10px}
-    .checkbox input{width:18px;height:18px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--pfl-orange),#d34f00);color:#111;border:none;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer}
-    .note{font-size:.9rem;color:#cfcfcf}
-    .footer{padding:40px 0;border-top:1px solid var(--pfl-border);color:#c9c9c9;text-align:center}
+    :root{--black:#0b0b0c;--white:#ffffff;--orange:#ff7a18;--gold:#ffd140;--border:#1f2937;--muted:#9ca3af}
+    html,body{margin:0;background:var(--black);color:var(--white);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
+    a{color:var(--gold);text-decoration:none} a:hover{text-decoration:underline}
+    .header{position:sticky;top:0;z-index:10;display:flex;gap:12px;align-items:center;padding:16px 20px;border-bottom:1px solid var(--border);background:#0b0b0c}
+    .logo{height:34px}
+    .brand{font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.02em}
+    .container{max-width:1000px;margin:0 auto;padding:20px}
+    .section{padding:42px 0}
+    .card{background:linear-gradient(180deg,#121212,#0d0d0d);border:1px solid var(--border);border-radius:14px;padding:20px}
+    h1{font-size:clamp(2rem,4vw,3rem);margin:.4rem 0 1rem}
+    h2{font-size:clamp(1.35rem,2.4vw,2rem);margin:0 0 1rem}
+    .small{color:#cfcfcf}
+    /* form */
+    .form{display:grid;gap:14px}
+    .row{display:grid;gap:12px}
+    .row.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media(max-width:760px){.row.cols-2{grid-template-columns:1fr}}
+    .field{position:relative;background:#0e0f12;border:1px solid var(--border);border-radius:12px;padding:12px 12px 6px;transition:border-color .2s}
+    .field:focus-within{border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.2)}
+    .label{position:absolute;top:8px;left:10px;color:#9ea3ad;font-size:12px}
+    .field input,.field select{width:100%;background:transparent;color:#e5e7eb;border:0;outline:0;padding-top:14px;font-size:15px}
+    .checkbox{display:flex;gap:10px;align-items:flex-start}
+    .btn{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--orange),#d34f00);color:#111;border:0;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer}
+    .notice{font-size:.95rem;color:#9ee89e;display:none;margin-top:8px}
+    /* paywall curtain */
     #paywall{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.55);backdrop-filter:blur(2px);border-radius:12px}
-    #paywall.hidden{display:none}
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="pfl-header" id="pflHeader">
-    <div class="pfl-brand">
-      <svg class="pfl-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="50" cy="50" r="48" stroke="var(--pfl-orange)" stroke-width="4" fill="none"/>
-        <path d="M25 60 L50 25 L75 60 Z" fill="var(--pfl-orange)"/>
-      </svg>
-      <span class="pfl-name">Portfolio Fly Labs</span>
-    </div>
+  <header class="header">
+    <svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48" stroke="#ff7a18" stroke-width="4" fill="none"/><path d="M25 60 L50 25 L75 60 Z" fill="#ff7a18"/></svg>
+    <div class="brand">Portfolio Fly Labs</div>
   </header>
 
-  <!-- Hero -->
-  <header class="hero">
-    <div class="container">
-      <span class="badge">Portfolio Fly Labs • Customer Discovery & Educational Sprint</span>
+  <main class="container">
+    <section class="section">
       <h1>Golden 20 Discovery Cohort</h1>
-      <p class="lead">Where structure meets freedom. The Golden 20 is our founding discovery sprint — a non-custodial, educational journey into disciplined observation, risk truth, and transparent growth. You retain custody of your funds; we provide the structure to understand them better.</p>
-      <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap">
-        <span class="chip">Non-custodial</span>
-        <span class="chip">5–10% risk cap</span>
-        <span class="chip">Audit-logged</span>
-        <span class="chip">Regulator-ready</span>
-      </div>
-    </div>
-  </header>
+      <p class="small">Non-custodial • Regulator-ready • Educational discovery. Keep full custody; we provide structure, transparency, and discipline.</p>
+    </section>
 
-  <main>
-    <section id="enroll" class="section">
-      <div class="container">
-        <h2>Secure Your Golden 20 Seat</h2>
-        <p class="small">Two quick steps keep this clean and compliant. <b>Step 1: Member Intake</b>. <b>Step 2: Payment</b>.</p>
+    <!-- ===================== STEP 1: INTAKE ===================== -->
+    <section class="section card" id="intake-card">
+      <h2>Step 1 — Member Intake (Required)</h2>
+      <p class="small">Ties your Golden 20 seat (NDA, Slack, orientation) to the right person even if a spouse or business pays.</p>
 
-        <!-- STEP 1: INTAKE -->
-        <div class="card" style="margin-bottom:20px">
-          <h3 style="margin-top:0">Step 1 — Member Intake (Required)</h3>
-          <p class="small" style="margin-top:6px;color:#cfcfcf">This ties the seat to the correct person even if a spouse or business pays. The name here appears on your NDA & Slack invite.</p>
+      <form id="golden20-intake" class="form"
+            method="post"
+            action="https://hooks.airtable.com/workflows/v1/genericWebhook/appnU2uh2AEYbY3eb/wflxXasE8gmILqKwO/wtr8QlqsGmwFAuxb0"
+            novalidate>
+        <input type="hidden" name="enrollment_id" id="enrollment_id" />
 
-          <form id="golden20-intake" class="form" method="post" action="https://hooks.airtable.com/workflows/v1/genericWebhook/appnU2uh2AEYbY3eb/wflxXasE8gmILqKwO/wtr8QlqsGmwFAuxb0" novalidate>
-            <input type="hidden" name="enrollment_id" id="enrollment_id">
+        <div class="row cols-2">
+          <div class="field"><span class="label">Legal First Name*</span><input name="first_name" autocomplete="given-name" required></div>
+          <div class="field"><span class="label">Legal Last Name*</span><input name="last_name" autocomplete="family-name" required></div>
+        </div>
+
+        <div class="row cols-2">
+          <div class="field"><span class="label">Email*</span><input type="email" name="email" autocomplete="email" required></div>
+          <div class="field"><span class="label">Mobile (optional)</span><input name="mobile" inputmode="tel" autocomplete="tel"></div>
+        </div>
+
+        <div class="row cols-2">
+          <div class="field" style="grid-column:1/-1"><span class="label">Street Address*</span><input name="addr1" autocomplete="address-line1" required></div>
+          <div class="field"><span class="label">City*</span><input name="city" autocomplete="address-level2" required></div>
+          <div class="field"><span class="label">State*</span><input name="state" autocomplete="address-level1" required></div>
+          <div class="field"><span class="label">ZIP*</span><input name="zip" inputmode="numeric" autocomplete="postal-code" required></div>
+        </div>
+
+        <div class="row">
+          <label class="checkbox">
+            <input type="checkbox" id="payer_is_different">
+            <span>Payment will be made by a spouse or business (optional)</span>
+          </label>
+          <div id="payer_block" style="display:none">
             <div class="row cols-2">
-              <div class="field"><span class="label">Legal First Name*</span><input name="first_name" required></div>
-              <div class="field"><span class="label">Legal Last Name*</span><input name="last_name" required></div>
+              <div class="field"><span class="label">Payer / Business Name</span><input name="payer_display_name" placeholder="e.g., ACME LLC or Spouse Name"></div>
+              <div class="field"><span class="label">Payer Email (optional)</span><input type="email" name="payer_email"></div>
             </div>
             <div class="row cols-2">
-              <div class="field"><span class="label">Email*</span><input type="email" name="email" required></div>
-              <div class="field"><span class="label">Mobile (optional)</span><input name="mobile"></div>
-            </div>
-            <div class="row cols-2">
-              <div class="field" style="grid-column:1 / -1"><span class="label">Street Address*</span><input name="addr1" required></div>
-              <div class="field"><span class="label">City*</span><input name="city" required></div>
-              <div class="field"><span class="label">State*</span><input name="state" required></div>
-              <div class="field"><span class="label">ZIP*</span><input name="zip" required></div>
-            </div>
-
-            <div class="row">
-              <label class="checkbox"><input type="checkbox" id="payer_is_different"> <span>Payment will be made by a spouse or business (optional)</span></label>
-              <div id="payer_block" style="display:none">
-                <div class="row cols-2">
-                  <div class="field"><span class="label">Payer / Business Name</span><input name="payer_display_name"></div>
-                  <div class="field"><span class="label">Payer Email (optional)</span><input type="email" name="payer_email"></div>
-                </div>
-                <div class="row cols-2">
-                  <div class="field"><span class="label">Relationship to Payer</span>
-                    <select name="payer_relationship">
-                      <option>Business</option><option>Spouse/Partner</option><option>Self</option><option>Other</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row cols-2">
-              <div class="field"><span class="label">IBKR Status</span>
-                <select name="ibkr_status">
-                  <option>Have an IBKR account</option>
-                  <option>Starting IBKR setup</option>
-                  <option>Prefer another broker</option>
+              <div class="field"><span class="label">Relationship</span>
+                <select name="payer_relationship">
+                  <option>Business</option><option>Spouse/Partner</option><option>Self</option><option>Other</option>
                 </select>
               </div>
             </div>
-
-            <label class="checkbox"><input type="checkbox" required> <span>I certify the above is accurate and I am 18+.</span></label>
-            <button type="submit" class="btn">Submit Intake</button>
-            <div id="intake_msg" class="note" style="margin-top:8px;color:#9ee89e;display:none">✅ Intake received. Payment is unlocked below.</div>
-          </form>
-        </div>
-
-        <!-- STEP 2: PAYMENT -->
-        <div class="card" id="payment-card" style="position:relative">
-          <h3 style="margin-top:0">Step 2 — Consent & Payment</h3>
-          <p class="small">Educational enrollment • One-time $400 • NOT an investment or advisory product.</p>
-
-          <div class="card" style="background:#0f0f0f;margin-bottom:12px">
-            <h4 style="margin:8px 0 6px">Participant Agreement Notice</h4>
-            <p style="font-size:0.9rem;color:#d1d5db;line-height:1.5">
-              By clicking <b>Pay Now</b>, you acknowledge you’ve read and agree to the Risk Disclosure, NDA, and Governance Framework. Payment constitutes your electronic signature under ESRA (NY) & UETA (GA/CA).
-            </p>
-            <label class="checkbox"><input type="checkbox" id="consent_checkbox" required> <span>I have read and agree to the documents above.</span></label>
           </div>
-
-          <!-- Lock overlay -->
-          <div id="paywall"><div class="small" style="text-align:center;color:#eee">🔒 Complete <b>Step 1</b> and check consent to unlock payment.</div></div>
-
-          <!-- PayPal Hosted Button -->
-          <div id="paypal-container" style="margin-top:10px"></div>
-          <p class="small" style="margin-top:12px">After payment you’ll receive an email within 24 hours with your NDA, Slack invite, and orientation schedule.</p>
-          <p class="small" style="margin-top:6px;color:#cfcfcf">Tip: Add your <b>Enrollment ID</b> <span id="eid_view"></span> in your PayPal memo for faster reconciliation.</p>
         </div>
+
+        <div class="row cols-2">
+          <div class="field"><span class="label">IBKR Status</span>
+            <select name="ibkr_status">
+              <option>Have an IBKR account</option>
+              <option>Starting IBKR setup</option>
+              <option>Prefer another broker</option>
+            </select>
+          </div>
+        </div>
+
+        <label class="checkbox"><input type="checkbox" required> <span>I certify the above is accurate and I am 18+.</span></label>
+        <button type="submit" class="btn">Submit Intake</button>
+        <div id="intake_msg" class="notice">✅ Intake received. Your payment button is unlocked below.</div>
+      </form>
+    </section>
+
+    <!-- ===================== STEP 2: CONSENT + PAY ===================== -->
+    <section class="section card" id="payment-card" style="position:relative">
+      <h2>Step 2 — Consent & Payment</h2>
+      <p class="small">Educational enrollment • One-time $400 • NOT an investment/advisory product.</p>
+
+      <div class="card" style="background:#0f0f0f;margin-bottom:12px">
+        <h3 style="margin:8px 0 6px">Participant Agreement</h3>
+        <p class="small" style="line-height:1.55">
+          By clicking <b>Pay Now</b>, you acknowledge: (1) you reviewed the NDA, Risk Disclosure, and Governance Framework;
+          (2) this is educational and non-custodial; (3) you consent via electronic signature; (4) you are 18+.
+        </p>
+        <label class="checkbox"><input type="checkbox" id="consent_checkbox"> <span>I have read and agree to the terms.</span></label>
       </div>
+
+      <!-- Lock overlay -->
+      <div id="paywall"><div class="small">🔒 Complete Step 1 and check the consent box to unlock payment.</div></div>
+
+      <!-- PayPal Hosted Button -->
+      <script src="https://www.paypal.com/sdk/js?client-id=BAAkneJQuDWD2PK9No40deT5VMGsJgqop0yjD9Wid5-7mNye-p0x5b3mMeDFlXmc4QokhGU64aPgpSlP-k&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+      <div id="paypal-container-M8EDTMFED77YG" style="margin-top:8px"></div>
+      <script>
+        if (window.paypal && paypal.HostedButtons) {
+          paypal.HostedButtons({ hostedButtonId: "M8EDTMFED77YG" })
+                .render("#paypal-container-M8EDTMFED77YG");
+        }
+      </script>
+
+      <p class="small" style="margin-top:12px">After payment, you’ll receive a confirmation email within 24 hours with your NDA copy, Slack invite, and orientation details.</p>
+      <p class="small">Tip: include your Enrollment ID <b id="eid_view"></b> in your PayPal memo for faster matching.</p>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container small">
-      <p>© <span id="y"></span> Portfolio Fly Labs. Payment constitutes acceptance under NY, GA, and CA electronic-signature laws (ESRA & UETA). Proof of behavior, not exposure.</p>
-    </div>
+  <footer class="container small" style="padding:40px 0;border-top:1px solid var(--border);text-align:center">
+    © <span id="y"></span> Portfolio Fly Labs — Proof of behavior, not exposure.
   </footer>
 
-  <!-- PayPal SDK (Hosted Buttons) -->
-  <script src="https://www.paypal.com/sdk/js?client-id=BAAkneJQuDWD2PK9No40deT5VMGsJgqop0yjD9Wid5-7mNye-p0x5b3mMeDFlXmc4QokhGU64aPgpSlP-k&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
-
   <script>
-    // Header glow
-    const hdr=document.getElementById('pflHeader');
-    const onScroll=()=>{(window.scrollY>10)?hdr.classList.add('scrolled'):hdr.classList.remove('scrolled');};
-    document.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+    // ---------- helpers ----------
+    const $ = s => document.querySelector(s);
 
-    // Float labels
-    document.querySelectorAll('#golden20-intake .field input,#golden20-intake .field select').forEach(el=>{
-      const f=el.closest('.field'); const t=()=>f.classList.toggle('filled',!!el.value);
-      ['change','input','blur'].forEach(ev=>el.addEventListener(ev,t)); t();
-    });
+    // EID: persistent for the session
+    let eid = localStorage.getItem('g20_eid');
+    if (!eid) {
+      eid = 'G20-' + Math.random().toString(36).slice(2,8).toUpperCase() + '-' + Date.now();
+      try { localStorage.setItem('g20_eid', eid); } catch(_) {}
+    }
+    $('#enrollment_id').value = eid;
+    $('#eid_view').textContent = eid;
 
     // Payer toggle
-    const payerToggle=document.getElementById('payer_is_different');
-    const payerBlock=document.getElementById('payer_block');
-    if(payerToggle){payerToggle.addEventListener('change',()=>{payerBlock.style.display=payerToggle.checked?'block':'none'})}
-
-    // Intake / Paywall state
-    const form=document.getElementById('golden20-intake');
-    const paywall=document.getElementById('paywall');
-    const consent=document.getElementById('consent_checkbox');
-    const eidInput=document.getElementById('enrollment_id');
-    const eidView=document.getElementById('eid_view');
-
-    // Generate or reuse Enrollment ID
-    const existingEID = localStorage.getItem('g20_eid');
-    const eid = existingEID || ('G20-' + Math.random().toString(36).slice(2,8).toUpperCase() + '-' + Date.now());
-    if(!existingEID) localStorage.setItem('g20_eid', eid);
-    if(eidInput) eidInput.value = eid;
-    if(eidView) eidView.textContent = eid;
+    $('#payer_is_different')?.addEventListener('change', e=>{
+      $('#payer_block').style.display = e.target.checked ? 'block' : 'none';
+    });
 
     // Unlock logic
+    const paywall = $('#paywall');
+    const consent = $('#consent_checkbox');
     function maybeUnlock(){
-      const ok = (localStorage.getItem('g20_intake_ok')==='1') && consent?.checked;
-      if(ok){ paywall.classList.add('hidden'); }
-      else  { paywall.classList.remove('hidden'); }
+      const ok = localStorage.getItem('g20_intake_ok') === '1' && consent?.checked;
+      paywall.style.display = ok ? 'none' : 'flex';
     }
     consent?.addEventListener('change', maybeUnlock);
 
-    // On form submit: post to Airtable webhook, unlock & scroll to PayPal
+    // Float label styling (optional)
+    document.querySelectorAll('.field input, .field select').forEach(el=>{
+      const f = el.closest('.field');
+      const t = ()=>{ /* cosmetic only */ };
+      ['change','input','blur'].forEach(ev=>el.addEventListener(ev,t));
+      t();
+    });
+
+    // ---------- INTAKE SUBMIT (Option A: no-cors) ----------
+    const form = $('#golden20-intake');
     form?.addEventListener('submit', async (e)=>{
       e.preventDefault();
+
       const fd = new FormData(form);
-      fd.set('enrollment_id', eid); // ensure EID included
-      try{
-        const resp = await fetch(form.action, { method:'POST', body: fd });
-        if(!resp.ok) throw new Error('network');
-        // mark success, show message
+      fd.set('enrollment_id', eid);
+
+      try {
+        // NOTE: no-cors => opaque response (can’t check status)
+        await fetch(form.action, { method:'POST', body: fd, mode:'no-cors' });
+
+        // Assume success and proceed
         localStorage.setItem('g20_intake_ok','1');
-        document.getElementById('intake_msg').style.display='block';
+        $('#intake_msg').style.display = 'block';
         maybeUnlock();
-        // smooth scroll to the payment card
-        document.getElementById('payment-card').scrollIntoView({behavior:'smooth', block:'start'});
+
+        // Smooth-scroll to payment
+        $('#payment-card').scrollIntoView({ behavior:'smooth', block:'start' });
+
         alert('✅ Intake recorded. Review consent and proceed to payment.');
-      }catch(err){
+      } catch(err){
         alert('We could not record your intake. Please try again or contact support.');
       }
     });
 
-    // Render PayPal Hosted Button + redirect on completion
-    function renderHostedButton(){
-      if(!(window.paypal && paypal.HostedButtons)) return;
-      paypal.HostedButtons({
-        hostedButtonId: "M8EDTMFED77YG",
-        // Works on most modern Hosted Buttons; if not available, set the
-        // Return URL in the PayPal button settings to /thank-you.html
-        onComplete: function () {
-          const eid = localStorage.getItem('g20_eid') || '';
-          window.location.href = 'thank-you.html?eid=' + encodeURIComponent(eid);
-        }
-      }).render("#paypal-container");
-    }
-
-    renderHostedButton();
+    // initial state
     maybeUnlock();
-    document.getElementById('y').textContent=new Date().getFullYear();
+    $('#y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
